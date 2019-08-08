@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">Laundry</string>
+    <!--Auth Acivity-->
+    <!--Sign In-->
+    <string name="tab_text_login">تسجيل الدخول</string>
+    <string name="tab_text_register">إنشاء حساب</string>
+    <string name="sign_in_phone_number">رقم الهاتف</string>
+    <string name="search">البحث </string>
+    <string name="sign_in_password">كلمة المرور</string>
+    <string name="sign_in_forget">فقد كلمة المرور؟</string>
+    <string name="btn_sign_in_text">تسجيل الدخول</string>
+    <string name="btn_sign_in_face_text">الفيس بوك</string>
+    <string name="signup_validation_type">Sign_UP</string>
+    <string name="emptyOrders">لايوجد طلبات حتى الان</string>
+    <string name="coin">" " ريال </string>
+
+    <!--Auth Acivity-->
+    <!--Sign Up-->
+    <string name="sign_up_username">إسم المستخدم</string>
+    <string name="sign_up_address"> العنوان  </string>
+    <string name="sign_up_email">البريد الإلكترونى</string>
+    <string name="sign_in_address">العنوان</string>
+    <string name="btn_sign_up_text">إنشاء حساب</string>
+    <string name="auth_empty_warring">يجب إخال جميع البيانات</string>
+
+    <string name="connection_vaild_msg">تم الإتصال</string>
+    <string name="connection_invaild_msg">لايوجد إتصال بالانترنت</string>
+
+    <!--Validation Acivity-->
+    <string name="validation_password">فقد كلمة المرور</string>
+    <string name="btn_validation_sendcode_text">إرسال الكود</string>
+    <string name="btn_confirm_text">تأكيد</string>
+    <string name="btn_saveCode_text">حفظ</string>
+    <string name="sign_in_new_password">كلمه المرور الجديده</string>
+    <string name="sign_in_ConfirmPassword">تأكيد كلمه المرور</string>
+    <string name="btn_sendCode_text">ارسال الكود</string>
+    <string name="validate_validation_type">forget password</string>
+    <string name="confirm_validation_type">confirm Validate</string>
+    <!--Map Acivity-->
+    <string name="title_activity_maps">Map</string>
+    <!--Home Activity-->
+    <string name="title_activity_home">المغسله</string>
+    <string name="tab_text_HomeOffers">العروض</string>
+    <string name="tab_text_HomeNear">الأقرب</string>
+    <string name="tab_text_HomeAll">الكل</string>
+
+    <string name="laundry_Details">تفاصيل المغسله</string>
+    <string name="Loading">جارى التحميل....</string>
+    <string name="order_amount">إجمالى الطلب  "  " </string>
+
+    <string name="confirm_dialog">جارى التأكيد برجاء الانتظار</string>
+    <string name="password_check_text">كلمه المرور غير متطابقه يرجى المحاوله مره اخرى</string>
+    <!--fragment_menu-->
+    <string name="txt_notfications">الإشعارات</string>
+    <string name="menu_profile">الصفحه الشخصيه</string>
+    <string name="menu_my_orders">طلباتى</string>
+    <string name="menu_join_request">طلب انضمام</string>
+    <string name="menu_contacts_us">اتصل بنا</string>
+    <string name="menu_rating">التقيم</string>
+    <string name="menu_share_app">مشاركه التطبيق</string>
+    <string name="menu_App_Terms">الشروط والاحكام</string>
+    <string name="menu_sign_out">تسجيل الخروج</string>
+    <string name="_chat_request">محادثه مع المندوب</string>
+    <!--order_activity-->
+    <string name="order_title">طلباتى</string>
+    <string name="change_password">تغير كلمه المرور</string>
+    <string name="payment_on_deliver">عند الاستلام</string>
+    <!--Payment-->
+    <string name="payment_online">دفع اونلاين</string>
+    <string name="payment_address">العنوان</string>
+    <string name="btn_payme_confirm">تأكيد الطلب</string>
+    <string name="payment_title">الدفع</string>
+    <string name="order_detail_title">تفاصيل الطلب</string>
+    <string name="order_total_text" >الاجمالى</string>
+    <string name="order_total_textAfter">  إجمالى الطلب   </string>
+    <string name="cat_wash">غسيل</string>
+    <string name="cat_ironing">كى</string>
+    <string name="cat_wash_ironing">غسيل وكى</string>
+    <string name="waring_text">ستفقد كل ما ضفتة من هذه المغسله اذا خرجت منها</string>
+    <string name="waring_postive">حسنا</string>
+    <string name="waring_negative">إالغاء</string>
+    <string name="addresses_title">العنوان</string>
+    <string name="addressesProfileUpdate">اضغط لتحديث العنوان</string>
+    <string name="add_new_address">أضف العنوان</string>
+    <string name="addresses_confirm_address">تأكيد العنوان</string>
+    <array name="item_list">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+    </array>
+    <string name="text_password_changed">تم تغير كلمه المرور بنجاح يرجى تسجيل الدخول من جديد</string>
+    <string name="title_profile">حسابى</string>
+    <string name="profileForgetPassword">تغير كلمه المرور</string>
+    <string name="profileOldPassword">كلمه المرور القديمه</string>
+    <string name="titleResetPassword">تغير كلمه المرور</string>
+    <string name="man_section">رجالى</string>
+    <string name="woman_Section">سيدات</string>
+    <string name="carpet_Section">سجاد</string>
+    <string name="blanket_Section">بطاطين</string>
+    <string name="service_Type_Text">اختر نوع الخدمه</string>
+    <string name="order_Finished">انتهى الطلب</string>
+    <string name="order_delviery_text">إستلم المندوب</string>
+    <string name="order_laundry_received">إستلمت المغسله</string>
+    <string name="order_to_laundry">الى المغسله</string>
+    <string name="about_title">عن التطبيق</string>
+    <string name="terms_title">الشروط والاحكام</string>
+    <string name="emptyCart">يجب إضافه منتجات اولا</string>
+    <string name="orderEmpty">لم يتم إختيار طلبك</string>
+    <string name="logOut">هل انت متاكد من انك تريد الخروج</string>
+    <string name="logOutAccept">نعم</string>
+    <string name="logOutReject">لا</string>
+    <string name="rate_postive">إرسال التقييم</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contactForum">الشكوى ......</string>
+    <string name="sendForum">إرسال</string>
+    <string name="contactForumTitle">موضوع الشكوى</string>
+    <string name="cancelOrder">إالغاء الطلب</string>
+    <string name="cancelOrderReason">سبب الإلغاء</string>
+    <string name="emptyLaundries">لايوجد مغاسل</string>
+    <string name="menuAbout">عن التطبيق</string>
+    <string name="chatHint">اكتب رسالة.....</string>
+    <string name="emptyLocation">يجب إختيار العنوان اولا</string>
+    <string name="paymentMethodEmpty">يجب ادخال طريقه الدفع</string>
+    <string name="exitText">هل انت متاكد من انك تريد الخروج ؟</string>
+    <string name="contact_title">اتصل بنا</string>
+    <string name="about_Desc">عندما نتحدث عن مشروع مغسلة ملابس فهذا يعني اننا نتحدث عن واحد من اكثر المشاريع الصغيرة شهرة وانتشارًا، فمغاسل الملابس منتشرة في كافة الانحاء، وبالحديث عن الاسباب التي ادت الى انتشار هذا المشروع بهذا الشكل الكبير فسنجد انها عديدة، ومنها،،  حاجة السوق الى المشروع بصفته يقدم خدمات ضرورية لشريحة كبيرة من العملاء. اسعار الخدمات في متناول الجميع وربما القيمة التي يحصل عليها العملاء تقدر بأكثر مما يدفعونه من اموال. مشروع يساعد الناس على ان يكونوا اكثر راحة. المشروع سهل التنفيذ، فهو من المشاريع التي تقدم خدمات محدودة يمكن للجميع القيام بها. المشروع سهل الادارة، فعدد العمالة محدود للغاية والمهام التي يتم تنفيذها محدودة ايضًا. مشروع مغلسة ملابس من المشاريع التي تحقق عوائد ربحية ممتازة، فهو يعتمد على تقديم الخدمات بأسعار قليلة لشريحة كبيرة من العملاء. وبناء على ما سبق فإن مشروع مغلسة ملابس يعد من المشاريع المجدية التي ننصح بتنفيذها، ولكن بشروط محددة لضمان النجاح، هذه الشروط نعرضها فيما يلي بالاضافة الى توضيح المتطلبات اللازمة لتنفيذ المشروع.</string>
+    <string name="channel_name">userCh</string>
+    <string name="channel_description">userChannel</string>
+    <string name="terms">
+    تمتثل لكافة القوانين واللوائح المعمول بها,
+        تقدم معلومات صحيحة ودقيقة  وتقوم بتحديثها بشكل دوري,
+        سوف تستخدم الخدمة لأغراض مشروعة فقط، ولن تستخدم الخدمات لإرسال أو تخزين أي مواد غير قانونية أو بهدف الاحتيال,
+        لن تستخدم الخدمة للتسبب بإيذاء أو مضايقة أو إزعاج أحد م,
+        لن تحاول إلحاق الضرر بالخدمة بأي شكل من الأشكال,
+        لن تنسخ أو توزع النظام أو المحتويات الأخرى دون الحصول على إذن كتابي,
+        سوف تحافظ على كلمة المرور لحسابك أو أي وسيلة تعريف نقدمها لك وتتيح الدخول إلى حسابك، بشكلٍ آمن وسري,
+        سوف تقدم لنا كافة الدلائل التي تثبت هويتك وفقاً لتقدير مغسلتي الخاص,
+        يحق لمغسلتي رفض تقديم الخدمة أو استخدام النظام دون إبداء أسباب
+    </string>
+    <string name="hintAddressPickLocation">اضغط لاختيار الموقع</string>
+    <string name="pickLocationSuccess">تم اختيار الموقع بنجاح</string>
+    <string name="languageChangeText">اللغة</string>
+    <string name="arabicLanguage">عربي</string>
+    <string name="englishLanguage">انجليزي</string>
+
+    <string name="garndTitle">تصميم وبرمجة</string>
+    <string name="grandName">GRAND</string>
+    <string name="grandSite">www.2Grand.net</string>
+    <string name="grandPhone">00201157771069</string>
+    <string name="grandWhatsApp">واتساب</string>
+    <string name="grandCall">اتصال</string>
+
+</resources>

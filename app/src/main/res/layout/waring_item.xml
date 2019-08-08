@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/overlayBackground"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/waring" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="@string/waring_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+          />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp12h"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/negative_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/dp8h"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/waring_negative"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18"
+              />
+
+        <Button
+            android:id="@+id/postive_Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dp8h"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/waring_postive"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18"
+             />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="laundryDetailsViewModel"
+            type="app.laundrystation.viewModels.LaundryDetailsViewModel" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.FragmentLaundryDetails">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:onClick="@{() -> laundryDetailsViewModel.back()}"
+                android:padding="@dimen/dp8h"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/txt_Laundry_Cat_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:padding="@dimen/dp4h"
+                android:text="@string/laundry_Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="@dimen/dp60w"
+                    android:layout_height="@dimen/dp80h"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp4h"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/background"
+                    app:laundryImage="@{laundryDetailsViewModel.laundryImage}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/line_Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/txt_laundry_Name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp8h"
+                        android:layout_weight="2.3"
+                        android:gravity="center_vertical|start"
+                        android:maxLength="30"
+                        android:padding="@dimen/dp4h"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+
+                        app:text="@{laundryDetailsViewModel.LaundryName}" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:layout_weight="1.7"
+                        android:gravity="center_horizontal|start"
+                        android:padding="@dimen/dp8w">
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/laundryRate"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:numStars="5"
+                            android:onClick="@{() -> laundryDetailsViewModel.rate()}"
+                            android:stepSize="1" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_Info"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_laundry_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp2w"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:padding="@dimen/dp4h"
+                        android:text="@string/app_name"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@android:color/black"
+                        app:text="@{laundryDetailsViewModel.LaundryDesc}" />
+
+
+                    <TextView
+                        android:id="@+id/txt_laundry_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="@dimen/dp8h"
+                        android:onClick="@{() -> laundryDetailsViewModel.openLaundryLocationMap()}"
+                        android:drawableStart="@drawable/ic_location_placeholder"
+                        android:gravity="start|center_vertical"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@android:color/black"
+                        app:text="@{laundryDetailsViewModel.LaundryAddress}" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/frame_Laundry_Details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

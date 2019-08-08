@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <data>
+
+        <variable
+            name="paymentViewModel"
+            type="app.laundrystation.viewModels.PaymentViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/txt_Laundry_Cat_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:padding="4dp"
+            android:text="@string/payment_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> paymentViewModel.back()}"
+            android:padding="8dp"
+            android:src="@drawable/ic_back" />
+
+        <RelativeLayout
+            android:id="@+id/paymentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Laundry_Cat_Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Laundry_Cat_Name">
+
+
+            <RadioGroup
+                android:id="@+id/paymentRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:onCheckedChanged="@{paymentViewModel.onSplitTypeChanged}"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/radioOnHand"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40h"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dp8h"
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow_ground"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/dp8h"
+                    android:text="@string/payment_on_deliver"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/radioOnlinePayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp40h"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dp8h"
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow_ground"
+                    android:gravity="start|center_vertical"
+                    android:padding="@dimen/dp8h"
+                    android:text="@string/payment_online"
+                    android:textColor="@android:color/black" />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentContainer"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:padding="4dp"
+            android:text="@string/payment_address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_margin="@dimen/dp8h"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="@dimen/dp8h"
+            app:cardElevation="@dimen/dp8h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <TextView
+                android:id="@+id/user_first_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_margin="@dimen/dp8h"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:text="@string/payment_address"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:text="@{paymentViewModel.userAddress}" />
+
+            <ImageView
+                android:id="@+id/payment_addresses_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_margin="4dp"
+                android:onClick="@{() -> paymentViewModel.selectAddress()}"
+                android:padding="4dp"
+                android:src="@drawable/ic_plus" />
+        </androidx.cardview.widget.CardView>
+
+
+        <Spinner
+            android:id="@+id/citiesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50h"
+            android:layout_below="@+id/cardView2"
+            android:layout_margin="@dimen/dp8h"
+            android:background="@drawable/shadow_ground"
+            android:onItemSelected="@{(parent,view,pos,id)->paymentViewModel.onSelectItem(parent,view,pos,id)}"
+            app:citiesAdapter="@{paymentViewModel.citiesAdapter}"
+            app:citiesDetails="@{paymentViewModel.citiesDetails}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+        <!--</androidx.cardview.widget.CardView>-->
+        <!--<TextView-->
+            <!--android:id="@+id/hiddenTotal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="@string/payment_address"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+            <!--android:textColor="@android:color/black" />-->
+
+        <Button
+            android:id="@+id/btn_Payment_Confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/citiesSpinner"
+            android:layout_margin="64dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> paymentViewModel.createOrder()}"
+            android:text="@string/btn_payme_confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:padding="@dimen/dp8h"
+             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </RelativeLayout>
+</layout>

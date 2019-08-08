@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="validationViewModel"
+            type="app.laundrystation.viewModels.ValidationViewModels" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.chaos.view.PinView
+            android:id="@+id/pin_Validate"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:itemBackground="@color/colorPrimary"
+            android:padding="8dp"
+            android:text="@={validationViewModel.pinCodeConfirmation}"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+             app:cursorColor="@color/color_blue"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="50dp"
+            app:itemRadius="8dp"
+            app:itemSpacing="3dp"
+            app:itemWidth="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lineColor="@color/colorPrimary"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp30w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:layout_marginEnd="@dimen/dp30h"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> validationViewModel.userConfirmCode()}"
+            android:text="@string/btn_confirm_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pin_Validate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="validationViewModel"
+            type="app.laundrystation.viewModels.ValidationViewModels" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_phone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/txt_password_lost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40h"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/validation_password"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_validation_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="4dp"
+            android:gravity="start|center_vertical"
+            android:hint="@string/sign_in_phone_number"
+            android:inputType="phone"
+            android:padding="@dimen/dp4h"
+            android:text="@={validationViewModel.userPhone}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password_lost"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="?colorPrimary" />
+
+        <Button
+            android:id="@+id/btn_Send_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp30w"
+            android:layout_marginTop="@dimen/dp30h"
+            android:layout_marginEnd="@dimen/dp30h"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> validationViewModel.userConfirmPhone()}"
+            android:text="@string/btn_sendCode_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAllCaps="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_validation_phone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

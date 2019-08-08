@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="authViewModel"
+            type="app.laundrystation.viewModels.AuthViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/sign_up_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_profile"
+                android:gravity="start|center_vertical"
+                android:hint="@string/sign_up_username"
+                android:inputType="text"
+                android:text="@={authViewModel.userName}"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/sign_up_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_profile"
+                android:gravity="start|center_vertical"
+                android:hint="@string/sign_up_email"
+                android:inputType="textEmailAddress"
+                android:text="@={authViewModel.userEmail}"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_name"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/sign_up_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_profile"
+                android:gravity="start|center_vertical"
+                android:hint="@string/sign_in_password"
+                android:inputType="textPassword"
+                android:text="@={authViewModel.userPassword}"
+
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_email"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/sign_up_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_phone"
+                android:gravity="start|center_vertical"
+                android:hint="@string/sign_in_phone_number"
+                android:inputType="phone"
+                android:text="@={authViewModel.userPhone}"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_password"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/sign_up_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_location_pin"
+                android:gravity="start|center_vertical"
+                android:hint="@string/sign_up_address"
+                android:inputType="text"
+                android:text="@={authViewModel.userAddresses}"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_phone"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <RelativeLayout
+                android:id="@+id/sign_up_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_address">
+
+
+                <TextView
+                    android:id="@+id/txt_userAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="@dimen/dp4h"
+                    android:layout_marginLeft="@dimen/dp4h"
+                    android:layout_marginTop="@dimen/dp4h"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/hintAddressPickLocation"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:onClick="@{()->authViewModel.getUserAddress()}"
+                    android:padding="@dimen/dp4h"
+                    android:text="@={authViewModel.pickLocationText}"
+                    android:textSize="@dimen/sp14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{()->authViewModel.getUserAddress()}"
+                    android:src="@drawable/ic_location_placeholder" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txt_userAddress"
+                    android:background="@color/colorAccent" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btn_Sign_Up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="@dimen/dp64h"
+                android:layout_marginStart="@dimen/dp64h"
+                android:layout_marginTop="@dimen/dp20h"
+                android:background="@color/colorAccent"
+                android:onClick="@{() -> authViewModel.userRegister()}"
+                android:text="@string/btn_sign_up_text"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_location" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

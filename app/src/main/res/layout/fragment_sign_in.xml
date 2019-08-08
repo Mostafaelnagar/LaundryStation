@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="authViewModel"
+            type="app.laundrystation.viewModels.AuthViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/sign_In_Phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp16h"
+            android:layout_marginStart="@dimen/sp32"
+            android:layout_marginTop="@dimen/dp16h"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_profile"
+            android:gravity="start|center_vertical"
+            android:hint="@string/sign_in_phone_number"
+            android:inputType="phone"
+            android:text="@={authViewModel.userPhone}"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="?colorPrimary" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/sign_In_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp16h"
+            android:layout_marginStart="@dimen/dp32h"
+            android:layout_marginTop="@dimen/dp16h"
+            android:drawablePadding="4dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:gravity="start|center_vertical"
+            android:hint="@string/sign_in_password"
+            android:inputType="textPassword"
+            android:text="@={authViewModel.userPassword}"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_In_Phone"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="?colorPrimary" />
+
+        <TextView
+            android:id="@+id/txt_password_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp32h"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:onClick="@{() -> authViewModel.userForgetPassword()}"
+            android:text="@string/sign_in_forget"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_In_Password" />
+
+        <Button
+            android:id="@+id/btn_Sign_In"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp32h"
+            android:layout_marginStart="@dimen/dp32h"
+            android:layout_marginTop="@dimen/dp16h"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> authViewModel.userAuth()}"
+            android:text="@string/btn_sign_in_text"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password_lost" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

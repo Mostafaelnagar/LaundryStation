@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="laundrySectionsItemViewModel"
+            type="app.laundrystation.viewModels.LaundrySectionsItemViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:onClick="@{() -> laundrySectionsItemViewModel.performClickAction(laundrySectionsItemViewModel.getSectionModel())}"
+        android:orientation="vertical"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                imageResource="@{laundrySectionsItemViewModel.imageResource}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120h"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/laundry_Service_Name"
+                android:layout_width="@dimen/dp120w"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:text="@{laundrySectionsItemViewModel.Name}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

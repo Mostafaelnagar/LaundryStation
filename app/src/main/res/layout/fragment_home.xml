@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="laundryViewModel"
+            type="app.laundrystation.viewModels.Laundries_ViewModels" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lin_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="@dimen/dp120w"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp6h"
+                android:layout_marginTop="@dimen/dp4h"
+                android:drawableEnd="@drawable/ic_search"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:onTextChanged="@{laundryViewModel.search}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <TextView
+                android:id="@+id/txt_Laundry_Cat_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/title_activity_home"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+
+        <lib.kingja.switchbutton.SwitchMultiButton
+            android:id="@+id/SwitchMultiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin_home"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:layout_marginStart="@dimen/dp8w"
+            android:layout_marginTop="@dimen/dp20h"
+            android:padding="@dimen/dp8h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:selectedColor="@color/colorPrimary"
+            app:selectedTab="2"
+            app:strokeRadius="5dp"
+            app:strokeWidth="1dp"
+            app:switchTabs="@array/switch_tabs"
+            app:textSize="@dimen/sp20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SwitchMultiButton"
+            android:layout_marginTop="@dimen/dp20h"
+            android:gravity="center_horizontal"
+            android:text="@string/emptyLaundries"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:visibility="@{laundryViewModel.emptyLaundries,default=gone}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_Laundries"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/SwitchMultiButton"
+            android:layout_marginBottom="@dimen/dp8h"
+            android:layout_marginTop="@dimen/dp8h"
+            app:laundryAdapter="@{laundryViewModel.laundryAdapter}"
+            app:laundryDetails="@{laundryViewModel.laundryDetails}" />
+
+    </RelativeLayout>
+</layout>

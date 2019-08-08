@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <data>
+
+        <variable
+            name="contactViewModel"
+            type="app.laundrystation.viewModels.ContactViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/txt_Laundry_Cat_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:padding="@dimen/dp4h"
+            android:text="@string/contact_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/dp20w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:onClick="@{() -> contactViewModel.back()}"
+            android:padding="@dimen/dp4h"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt_Laundry_Cat_Name"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/contactForumTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/contactForumTitle"
+                android:inputType="text"
+                android:text="@={contactViewModel.ContactForumTitle}"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileImgae"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/contactForum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp32h"
+                android:layout_marginStart="@dimen/dp32h"
+                android:layout_marginTop="@dimen/dp6h"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/contactForum"
+                android:inputType="text"
+                android:text="@={contactViewModel.ContactForum}"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileImgae"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="?colorPrimary" />
+
+            <Button
+                android:id="@+id/btn_Sign_Up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="@dimen/dp64h"
+                android:layout_marginStart="@dimen/dp64h"
+                android:layout_marginTop="@dimen/dp14h"
+                android:background="@color/colorAccent"
+                android:onClick="@{() -> contactViewModel.sendForum()}"
+                android:text="@string/sendForum"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_password_lost" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</layout>

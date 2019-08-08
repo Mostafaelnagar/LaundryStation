@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">Laundry</string>
+    <!--Auth Acivity-->
+    <!--Sign In-->
+    <string name="tab_text_login">Login</string>
+    <string name="tab_text_register">Create account</string>
+    <string name="sign_in_phone_number">Phone</string>
+    <string name="search">Search </string>
+    <string name="sign_in_password">Password</string>
+    <string name="sign_in_forget">Forget Password ?</string>
+    <string name="btn_sign_in_text">Login</string>
+    <string name="btn_sign_in_face_text">Facebook</string>
+    <string name="signup_validation_type">Sign_UP</string>
+    <string name="emptyOrders">There is no Orders Now</string>
+
+    <!--Auth Acivity-->
+    <!--Sign Up-->
+    <string name="sign_up_username">User name</string>
+    <string name="sign_up_address">Address</string>
+    <string name="sign_up_email">Email </string>
+    <string name="sign_in_address">Address</string>
+    <string name="btn_sign_up_text">Create Account</string>
+    <string name="auth_empty_warring">Please Fill All Fields</string>
+
+    <string name="connection_vaild_msg">Connected</string>
+    <string name="connection_invaild_msg">No Connection,try again later</string>
+
+    <!--Validation Acivity-->
+    <string name="validation_password">Forget Password</string>
+    <string name="btn_validation_sendcode_text">Send Code</string>
+    <string name="btn_confirm_text">Confirm</string>
+    <string name="btn_saveCode_text">Save</string>
+    <string name="sign_in_new_password">New Password</string>
+    <string name="sign_in_ConfirmPassword">Confirm Password</string>
+    <string name="btn_sendCode_text"> Send Code  </string>
+    <string name="validate_validation_type">forget password</string>
+    <string name="confirm_validation_type">confirm Validate</string>
+    <!--Map Acivity-->
+    <string name="title_activity_maps">Map</string>
+    <!--Home Activity-->
+    <string name="title_activity_home">Laundry</string>
+    <string name="tab_text_HomeOffers">Offers</string>
+    <string name="tab_text_HomeNear">Nearest</string>
+    <string name="tab_text_HomeAll">All</string>
+
+    <string name="laundry_Details">Laundry details</string>
+    <string name="Loading">  Loading....</string>
+    <string name="order_amount">Total "  " </string>
+
+    <string name="confirm_dialog">جارى التأكيد برجاء الانتظار</string>
+    <string name="password_check_text"> Password not match, try again</string>
+    <!--fragment_menu-->
+    <string name="txt_notfications">Notifications</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_my_orders">My Orders</string>
+    <string name="menu_join_request">Join request</string>
+    <string name="menu_contacts_us">Contact us</string>
+    <string name="menu_rating">Rating</string>
+    <string name="menu_share_app">Share</string>
+    <string name="menu_App_Terms">Terms and Condition</string>
+    <string name="menu_sign_out">Log out</string>
+    <string name="_chat_request">Delegate Chat</string>
+    <!--order_activity-->
+    <string name="order_title">My Orders</string>
+    <string name="change_password">Change Password</string>
+    <string name="payment_on_deliver">On Delivered</string>
+    <!--Payment-->
+    <string name="payment_online">Online</string>
+    <string name="payment_address">Address</string>
+    <string name="btn_payme_confirm">Confirm Order</string>
+    <string name="payment_title">Payment</string>
+    <string name="order_detail_title">Order Details</string>
+    <string name="order_total_text" > Total  </string>
+    <string name="order_total_textAfter">   Total   </string>
+    <string name="cat_wash">Wash</string>
+    <string name="cat_ironing">Ironing</string>
+    <string name="cat_wash_ironing">Wash and Ironing</string>
+    <string name="waring_text">you will lose items added from this laundry you add if you exit</string>
+    <string name="waring_postive">Ok</string>
+    <string name="waring_negative">Cancel</string>
+    <string name="addresses_title">Address</string>
+    <string name="addressesProfileUpdate">Click to change address</string>
+    <string name="add_new_address">Add address</string>
+    <string name="addresses_confirm_address">Confirm Address</string>
+    <array name="item_list">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+    </array>
+    <string name="text_password_changed">Password changed ,please login again</string>
+    <string name="title_profile">Profile</string>
+    <string name="profileForgetPassword">Change password</string>
+    <string name="profileOldPassword">Old Password</string>
+    <string name="titleResetPassword">Change password</string>
+    <string name="man_section">Men</string>
+    <string name="woman_Section">Woman</string>
+    <string name="carpet_Section">Carpet</string>
+    <string name="blanket_Section">Blanket</string>
+    <string name="service_Type_Text">Choose service</string>
+    <string name="order_Finished">Order Finished</string>
+    <string name="order_delviery_text">Delegate recieved</string>
+    <string name="order_laundry_received">Laundry recieved</string>
+    <string name="order_to_laundry">to Laundry</string>
+    <string name="about_title">About Us</string>
+    <string name="terms_title">Terms and Condition</string>
+    <string name="emptyCart">Please add items first</string>
+    <string name="orderEmpty">Order not accepted</string>
+    <string name="logOut">Are you want to exit ?</string>
+    <string name="logOutAccept">Yes</string>
+    <string name="logOutReject">No</string>
+    <string name="rate_postive">Send rate</string>
+    <string name="coin">" " Riyal </string>
+
+    <string name="contactForum">Complain ......</string>
+    <string name="sendForum">Send</string>
+    <string name="contactForumTitle">Subject</string>
+    <string name="cancelOrder">Cancel order</string>
+    <string name="cancelOrderReason">Cancelation reason</string>
+    <string name="emptyLaundries">No Laundries</string>
+    <string name="menuAbout">About Us</string>
+    <string name="chatHint">Write message.....</string>
+    <string name="emptyLocation">Choose address first</string>
+    <string name="paymentMethodEmpty">Please Payment Method first</string>
+    <string name="exitText">Are you want to exit ?</string>
+    <string name="contact_title">Contact Us</string>
+    <string name="about_Desc">عندما نتحدث عن مشروع مغسلة ملابس فهذا يعني اننا نتحدث عن واحد من اكثر المشاريع الصغيرة شهرة وانتشارًا، فمغاسل الملابس منتشرة في كافة الانحاء، وبالحديث عن الاسباب التي ادت الى انتشار هذا المشروع بهذا الشكل الكبير فسنجد انها عديدة، ومنها،،  حاجة السوق الى المشروع بصفته يقدم خدمات ضرورية لشريحة كبيرة من العملاء. اسعار الخدمات في متناول الجميع وربما القيمة التي يحصل عليها العملاء تقدر بأكثر مما يدفعونه من اموال. مشروع يساعد الناس على ان يكونوا اكثر راحة. المشروع سهل التنفيذ، فهو من المشاريع التي تقدم خدمات محدودة يمكن للجميع القيام بها. المشروع سهل الادارة، فعدد العمالة محدود للغاية والمهام التي يتم تنفيذها محدودة ايضًا. مشروع مغلسة ملابس من المشاريع التي تحقق عوائد ربحية ممتازة، فهو يعتمد على تقديم الخدمات بأسعار قليلة لشريحة كبيرة من العملاء. وبناء على ما سبق فإن مشروع مغلسة ملابس يعد من المشاريع المجدية التي ننصح بتنفيذها، ولكن بشروط محددة لضمان النجاح، هذه الشروط نعرضها فيما يلي بالاضافة الى توضيح المتطلبات اللازمة لتنفيذ المشروع.</string>
+    <string name="channel_name">userCh</string>
+    <string name="channel_description">userChannel</string>
+    <string name="terms">
+    تمتثل لكافة القوانين واللوائح المعمول بها,
+        تقدم معلومات صحيحة ودقيقة  وتقوم بتحديثها بشكل دوري,
+        سوف تستخدم الخدمة لأغراض مشروعة فقط، ولن تستخدم الخدمات لإرسال أو تخزين أي مواد غير قانونية أو بهدف الاحتيال,
+        لن تستخدم الخدمة للتسبب بإيذاء أو مضايقة أو إزعاج أحد م,
+        لن تحاول إلحاق الضرر بالخدمة بأي شكل من الأشكال,
+        لن تنسخ أو توزع النظام أو المحتويات الأخرى دون الحصول على إذن كتابي,
+        سوف تحافظ على كلمة المرور لحسابك أو أي وسيلة تعريف نقدمها لك وتتيح الدخول إلى حسابك، بشكلٍ آمن وسري,
+        سوف تقدم لنا كافة الدلائل التي تثبت هويتك وفقاً لتقدير مغسلتي الخاص,
+        يحق لمغسلتي رفض تقديم الخدمة أو استخدام النظام دون إبداء أسباب
+    </string>
+    <string name="hintAddressPickLocation">Click to choose address</string>
+    <string name="pickLocationSuccess">Address picked successfully</string>
+    <string name="languageChangeText">Language</string>
+    <string name="arabicLanguage">Arabic</string>
+    <string name="englishLanguage">English</string>
+
+    <string name="garndTitle">تصميم وبرمجة</string>
+    <string name="grandName">GRAND</string>
+    <string name="grandSite">www.2Grand.net</string>
+    <string name="grandPhone">00201157771069</string>
+    <string name="grandWhatsApp">واتساب</string>
+    <string name="grandCall">اتصال</string>
+
+</resources>

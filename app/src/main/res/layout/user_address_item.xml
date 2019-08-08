@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <data>
+
+        <variable
+            name="chooseAddressItemViewModel"
+            type="app.laundrystation.viewModels.ChooseAddressItemViewModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp8h"
+        app:cardCornerRadius="@dimen/dp8h"
+        app:cardElevation="@dimen/dp4h">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/selectionState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp4w"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/item_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp4w"
+                android:layout_toEndOf="@+id/selectionState"
+                android:maxLength="30"
+                android:padding="4dp"
+                android:text="@string/cat_wash_ironing"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                app:text="@{chooseAddressItemViewModel.address}" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

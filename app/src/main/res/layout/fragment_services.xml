@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+    <data>
+
+        <variable
+            name="laundryServicesViewModel"
+            type="app.laundrystation.viewModels.LaundryServicesViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_Services_Details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:laundryServices="@{laundryServicesViewModel.laundryServices}"
+            app:laundryServicesAdapter="@{laundryServicesViewModel.laundryServicesAdapter}" />
+
+
+
+
+            <TextView
+                android:layout_width="@dimen/dp200w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/dp8h"
+                 android:onClick="@{() -> laundryServicesViewModel.setOrder()}"
+                android:id="@+id/btn_Order_Total"
+                android:background="@color/colorAccent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/order_total_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimary"
+                app:text="@{laundryServicesViewModel.orderTotal}" />
+
+
+    </RelativeLayout>
+</layout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <data>
+
+        <variable
+            name="chatViewModel"
+            type="app.laundrystation.viewModels.ChatViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/txt_Laundry_Cat_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:padding="@dimen/dp4h"
+            android:text="@string/order_detail_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/dp20w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:onClick="@{() -> chatViewModel.back()}"
+            android:padding="@dimen/dp4h"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_Chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeSendMessage"
+            android:layout_below="@+id/imageView6"
+            android:layout_marginTop="@dimen/dp8h"
+            app:chatAdapter="@{chatViewModel.chatAdapter}"
+            app:chatDetails="@{chatViewModel.chatDetails}" />
+
+        <RelativeLayout
+            android:id="@+id/relativeSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp8h"
+            android:layout_marginEnd="@dimen/dp15w"
+            android:layout_marginStart="@dimen/dp15w"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/chat_Send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:onClick="@{() -> chatViewModel.sendMessage()}"
+                android:src="@mipmap/ic_send" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp30h"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/chat_Send"
+                android:background="@android:color/transparent"
+                android:hint="@{chatViewModel.messageHint}"
+                android:padding="@dimen/dp2h"
+                android:text="@={chatViewModel.message}" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

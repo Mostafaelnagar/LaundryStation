@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <data>
+
+        <variable
+            name="newAddressViewModel"
+            type="app.laundrystation.viewModels.NewAddressViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layoutDirection="ltr">
+
+        <TextView
+            android:id="@+id/txt_Addresses_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16h"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:padding="@dimen/dp4w"
+            android:text="@string/add_new_address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8w"
+            android:layout_marginStart="@dimen/dp32w"
+            android:layout_marginTop="@dimen/dp16h"
+            android:onClick="@{() -> newAddressViewModel.back()}"
+            android:padding="@dimen/dp8w"
+
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8w"
+            android:padding="@dimen/dp4w"
+            android:text="@string/addresses_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Addresses_title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8w"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="@dimen/dp8h"
+            app:cardElevation="@dimen/dp4w"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/sign_up_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp10h"
+                    android:drawableStart="@drawable/ic_location_pin"
+                    android:drawablePadding="4dp"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/sign_up_address"
+                    android:inputType="text"
+                    android:text="@={newAddressViewModel.userAddresses}"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sign_up_phone"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="?colorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/dp8h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/hintAddressPickLocation"
+                    android:onClick="@{() -> newAddressViewModel.getUserAddress()}"
+                    android:padding="@dimen/dp4w"
+                    android:text="@={newAddressViewModel.pickLocationText}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Addresses_title" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="@dimen/dp180w"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> newAddressViewModel.confirmSelection()}"
+            android:padding="@dimen/dp8h"
+            android:text="@string/addresses_confirm_address"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

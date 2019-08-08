@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="menuViewModel"
+            type="app.laundrystation.viewModels.MenuViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp18w"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_menu_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp32h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_profile"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toProfile()}"
+                android:text="@string/menu_profile"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/menu_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_shopping"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toMyOrders()}"
+                android:text="@string/menu_my_orders"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_menu_profile" />
+
+
+            <TextView
+                android:id="@+id/menu_ContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_care_planet"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toContactForum()}"
+                android:text="@string/menu_contacts_us"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_orders" />
+
+            <TextView
+                android:id="@+id/menu_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_rating"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toRate()}"
+                android:text="@string/menu_rating"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_ContactUs" />
+
+            <TextView
+                android:id="@+id/menu_About"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_shopping"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toAbout()}"
+                android:text="@string/menuAbout"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_rating" />
+
+
+            <TextView
+                android:id="@+id/menu_Terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_lock"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toTerms()}"
+                android:text="@string/menu_App_Terms"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_About" />
+
+            <TextView
+                android:id="@+id/menu_Language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_lock"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toLanguage()}"
+                android:text="@string/languageChangeText"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_Terms" />
+
+            <TextView
+                android:id="@+id/menu_SignOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp8h"
+                android:layout_marginStart="@dimen/dp8h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:drawablePadding="@dimen/dp8h"
+                android:drawableStart="@drawable/ic_sign_out"
+                android:gravity="center_vertical"
+                android:onClick="@{() -> menuViewModel.toLogOut()}"
+                android:text="@string/menu_sign_out"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menu_Language" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp18w"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/grandLogo"
+                    android:layout_width="@dimen/dp100w"
+                    android:layout_height="@dimen/dp100w"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dp8w"
+                    android:onClick="@{() -> menuViewModel.grandInfo()}"
+                    android:src="@drawable/grand_logo" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

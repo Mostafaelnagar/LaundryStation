@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="switch_tabs">
+        <item>Offers</item>
+        <item>Nearest</item>
+        <item>All</item>
+    </string-array>
+    <string-array name="steps">
+        <item>New\norder</item>
+        <item>to\nlaundry</item>
+        <item>Laundry\nreceived</item>
+        <item>Delegate\nreceived</item>
+        <item>Finished</item>
+        <item>Cancel\norder</item>
+
+    </string-array>
+    <string-array name="orderStatus">
+        <item>New order</item>
+        <item>to laundry</item>
+        <item>Laundry received</item>
+        <item>Delegate received</item>
+        <item>Finished</item>
+        <item>Cancel order</item>
+
+    </string-array>
+</resources>

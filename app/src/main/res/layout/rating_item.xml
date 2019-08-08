@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RatingBar
+        android:id="@+id/laundryRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp8h" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp12h"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/negativeRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/waring_negative"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18"
+              />
+
+        <Button
+            android:id="@+id/postiveRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/rate_postive"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp18"
+              />
+    </LinearLayout>
+
+</LinearLayout>
